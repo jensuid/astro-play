@@ -1,0 +1,23 @@
+---
+import Welcome from '../components/Welcome.astro';
+import Layout from '../layouts/Layout.astro';
+import { MyChart } from '../components/my-chart';
+import  MyLineChart  from '../components/MyLineChart';
+import  MyAreaChart from '../components/MyAreaChart';
+
+
+// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
+// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+---
+
+<Layout>
+	<MyChart client:load> Chart Test</MyChart>
+	<Welcome />
+	<MyAreaChart client:load/>	
+	<MyLineChart client:load/>
+
+
+
+
+
+</Layout>
