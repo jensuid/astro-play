@@ -32,15 +32,15 @@ import {
   
   export default function MyLineChart() {
     return (
-     
-        <LineChart width={400} height={400}data={data}>
+     <ResponsiveContainer width="80%" height={400}>
+        <LineChart data={data}>
           <Line type="monotone" dataKey="sales" stroke="#8884d8" />
           <CartesianGrid stroke="#cdd" strokeDasharray="5 2" />
           <XAxis dataKey="city" />
           <YAxis />
           <Tooltip></Tooltip>
         </LineChart>
-      
+      </ResponsiveContainer>
     );
   }
   
