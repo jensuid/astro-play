@@ -29,12 +29,12 @@ const chartConfig = {
 
 export function MyChart() {
   return (
-    <ChartContainer config={chartConfig} className="min-h-[300px] w-full">
+      <ChartContainer config={chartConfig} className="h-50 w-100" >
       <BarChart accessibilityLayer data={chartData}>
         <CartesianGrid vertical={false} />
         <Bar dataKey="desktop" fill="var(--color-desktop)" radius={4} />
-        <Bar dataKey="mobile" fill="var(--color-mobile)" radius={4} />
+        <Bar dataKey="mobile" fill="var(--color-mobile)" radius={5} />
       </BarChart>
-    </ChartContainer>
+      </ChartContainer>
   )
 }

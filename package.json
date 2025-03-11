@@ -25,6 +25,6 @@
     "tailwindcss-animate": "^1.0.7"
   },
   "overrides": {
-    "react-is": "^19.0.0-rc-69d4b800-20241021"
+    "react-is": "^19.0.0"
   }
 }

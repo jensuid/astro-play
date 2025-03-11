@@ -4,6 +4,7 @@ import Layout from '../layouts/Layout.astro';
 import { MyChart } from '../components/my-chart';
 import  MyLineChart  from '../components/MyLineChart';
 import  MyAreaChart from '../components/MyAreaChart';
+import Sections from '../components/Sections.astro';
 
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
@@ -12,6 +13,7 @@ import  MyAreaChart from '../components/MyAreaChart';
 
 <Layout>
 	<MyChart client:visible> Chart Test</MyChart>
+	<Sections />
 	<Welcome />
 	<MyAreaChart client:load/>	
 	<MyLineChart client:load/>
