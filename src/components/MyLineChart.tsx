@@ -32,7 +32,7 @@ import {
   
   export default function MyLineChart() {
     return (
-     <ResponsiveContainer width="80%" height={400}>
+     <ResponsiveContainer width="75%" height={400}>
         <LineChart data={data}>
           <Line type="monotone" dataKey="sales" stroke="#8884d8" />
           <CartesianGrid stroke="#cdd" strokeDasharray="5 2" />
