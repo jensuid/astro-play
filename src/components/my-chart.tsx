@@ -1,9 +1,9 @@
 
 
-import { Bar, BarChart, CartesianGrid } from "recharts"
+import { Bar, BarChart, CartesianGrid,XAxis } from "recharts"
 
 import type { ChartConfig } from "@/components/ui/chart"
-import { ChartContainer } from "@/components/ui/chart"
+import { ChartContainer,ChartTooltipContent,ChartTooltip } from "@/components/ui/chart"
 
 
 const chartData = [
@@ -29,9 +29,18 @@ const chartConfig = {
 
 export function MyChart() {
   return (
-      <ChartContainer config={chartConfig} className="h-50 w-100" >
+      <ChartContainer config={chartConfig} className="h-[200px] w-100" >
       <BarChart accessibilityLayer data={chartData}>
+      <ChartTooltip
+              cursor={false}
+              content={<ChartTooltipContent indicator="dashed" />}
+            />
         <CartesianGrid vertical={false} />
+        <XAxis dataKey="month" 
+          axisLine={false}
+          tickLine={false}
+          tickFormatter={(value) => value.slice(0, 3)}
+        />
         <Bar dataKey="desktop" fill="var(--color-desktop)" radius={4} />
         <Bar dataKey="mobile" fill="var(--color-mobile)" radius={5} />
       </BarChart>

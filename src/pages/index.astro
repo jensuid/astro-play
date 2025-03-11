@@ -12,14 +12,9 @@ import Sections from '../components/Sections.astro';
 ---
 
 <Layout>
-	<MyChart client:visible> Chart Test</MyChart>
 	<Sections />
 	<Welcome />
-	<MyAreaChart client:load/>	
-	<MyLineChart client:load/>
-
-
-
-
-
+	<MyChart client:visible> Chart Test</MyChart>
+	<MyAreaChart client:visible/>	
+	<MyLineChart client:visible/>
 </Layout>
